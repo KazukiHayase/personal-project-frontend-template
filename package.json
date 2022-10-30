@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next -p 3333",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "codegen": "graphql-codegen --config codegen.yml",
+    "relay": "relay-compiler",
+    "path": "pathpida",
+    "eslint": "eslint --ext .tsx,.ts src/"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@hookform/resolvers": "^2.9.9",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/lab": "^5.0.0-alpha.103",
+    "@mui/material": "^5.10.5",
+    "next": "latest",
+    "notistack": "^2.0.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^3.1.4",
+    "react-hook-form": "^7.37.0",
+    "react-relay": "^14.1.0",
+    "relay-nextjs": "^0.10.0",
+    "relay-runtime": "^14.1.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.12.0",
+    "@graphql-codegen/schema-ast": "^2.5.1",
+    "@types/node": "^12.12.21",
+    "@types/react": "^18.0.19",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-relay": "^14.1.1",
+    "@types/relay-runtime": "^14.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.10",
+    "graphql": "^16.6.0",
+    "pathpida": "^0.18.1",
+    "prettier": "^2.7.1",
+    "relay-compiler": "^14.1.0",
+    "relay-compiler-language-typescript": "^15.0.1",
+    "typescript": "*"
+  }
+}
