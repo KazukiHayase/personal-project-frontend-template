@@ -1,4 +1,4 @@
-# TODO: NEXT_PUBLIC_RELAY_ENDPOINT, projectIdを追記してコメントアウトを外す
+# TODO: NEXT_PUBLIC_RELAY_ENDPOINT, projectIdを埋める
 # name: Deploy to Firebase Hosting on merge
 # on:
 #   push:
@@ -29,7 +29,7 @@
 #       - name: Setup environment
 #         run: |
 #           touch .env
-#           echo NEXT_PUBLIC_RELAY_ENDPOINT= >> .env
+#           echo NEXT_PUBLIC_RELAY_ENDPOINT="" >> .env
 #
 #       - name: Deploy
 #         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -37,4 +37,4 @@
 #           repoToken: '${{ secrets.GITHUB_TOKEN }}'
 #           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BATSUGAME }}'
 #           channelId: live
-#           projectId:
+#           projectId: ""
