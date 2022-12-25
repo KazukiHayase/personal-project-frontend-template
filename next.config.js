@@ -8,4 +8,5 @@ module.exports = {
       customScalars: {}
     },
   },
+  transpilePackages: ['@mui/material'],
 }
