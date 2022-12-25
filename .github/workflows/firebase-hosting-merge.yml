@@ -1,9 +1,12 @@
-# TODO: NEXT_PUBLIC_RELAY_ENDPOINT, projectIdを埋める
 # name: Deploy to Firebase Hosting on merge
 # on:
 #   push:
 #     branches:
 #       - main
+# env:
+# # TODO: 代入
+#   SERVER_ENDPOINT: ""
+#   PROJECT_ID: ""
 #
 # jobs:
 #   build_and_deploy:
@@ -29,12 +32,12 @@
 #       - name: Setup environment
 #         run: |
 #           touch .env
-#           echo NEXT_PUBLIC_RELAY_ENDPOINT="" >> .env
+#           echo NEXT_PUBLIC_RELAY_ENDPOINT=${{ env.SERVER_ENDPOINT }} >> .env
 #
 #       - name: Deploy
 #         uses: FirebaseExtended/action-hosting-deploy@v0
 #         with:
 #           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-#           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BATSUGAME }}'
+#           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
 #           channelId: live
-#           projectId: ""
+#           projectId: '${{ env.PROJECT_ID }}'
