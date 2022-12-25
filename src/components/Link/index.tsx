@@ -14,7 +14,8 @@ import { useRouter } from 'next/router';
 import * as React from 'react';
 
 // Add support for the sx prop for consistency with the other branches.
-const Anchor = styled('a')({});
+const LinkAnchor = styled('a')({});
+const Anchor = styled('span')({});
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
@@ -90,7 +91,7 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
     if (isExternal) {
       if (noLinkStyle) {
         return (
-          <Anchor className={className} href={href} ref={ref} {...other} />
+          <LinkAnchor className={className} href={href} ref={ref} {...other} />
         );
       }
 
