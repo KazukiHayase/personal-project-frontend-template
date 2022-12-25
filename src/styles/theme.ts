@@ -2,13 +2,13 @@ import { createTheme, responsiveFontSizes } from '@mui/material';
 
 export const theme = responsiveFontSizes(
   createTheme({
-    palette: {
-      primary: {
-        light: '#ff8a50',
-        main: '#ff5722',
-        dark: '#c41c00',
-      },
-    },
+    // palette: {
+    //   primary: {
+    //     light: '',
+    //     main: '',
+    //     dark: '',
+    //   },
+    // },
     components: {
       MuiCssBaseline: {
         styleOverrides: {
