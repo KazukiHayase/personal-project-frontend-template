@@ -11,6 +11,7 @@ import { CssBaseline } from '@mui/material';
 import { getClientEnvironment } from '@/lib/relay/client_environment';
 import { ErrorBoundary } from 'react-error-boundary';
 import { Error } from '@/components/Error';
+import Head from 'next/head';
 
 const clientEnv = getClientEnvironment();
 const initialPreloadedQuery = getInitialPreloadedQuery({
@@ -34,27 +35,34 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>);
 
   return (
-    <ErrorBoundary
-      FallbackComponent={() => (
-        <DefaultLayout>
-          <Error />
-        </DefaultLayout>
-      )}
-    >
-      <RelayEnvironmentProvider environment={env}>
-        <SnackbarProvider
-          maxSnack={1}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'right',
-          }}
-        >
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {getLayout(<Component {...pageProps} {...relayProps} />)}
-          </ThemeProvider>
-        </SnackbarProvider>
-      </RelayEnvironmentProvider>
-    </ErrorBoundary>
+    <>
+      <Head>
+        {/* TODO: title設定 */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>title</title>
+      </Head>
+      <ErrorBoundary
+        FallbackComponent={() => (
+          <DefaultLayout>
+            <Error />
+          </DefaultLayout>
+        )}
+      >
+        <RelayEnvironmentProvider environment={env}>
+          <SnackbarProvider
+            maxSnack={1}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+          >
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              {getLayout(<Component {...pageProps} {...relayProps} />)}
+            </ThemeProvider>
+          </SnackbarProvider>
+        </RelayEnvironmentProvider>
+      </ErrorBoundary>
+    </>
   );
 }

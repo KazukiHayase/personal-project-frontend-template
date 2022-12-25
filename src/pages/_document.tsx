@@ -32,12 +32,10 @@ class MyDocument extends NextDocument<DocumentProps> {
   render() {
     const { relayDocument } = this.props;
 
-    // TODO: title, description, faviconの設定
+    // TODO: description, faviconの設定
     return (
       <Html>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>title</title>
           <meta
             name="description"
             content="description"
