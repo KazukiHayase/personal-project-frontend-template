@@ -1,8 +1,12 @@
-import { Box, Button, Container, Typography } from '@mui/material';
-import { grey } from '@mui/material/colors';
-import { NextPage } from 'next';
+'use client';
 
-const IndexPage: NextPage = () => {
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import grey from '@mui/material/colors/grey';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+
+export default function NotFound() {
   return (
     <Box sx={{ py: 20 }}>
       <Container maxWidth="md">
@@ -21,6 +25,4 @@ const IndexPage: NextPage = () => {
       </Container>
     </Box>
   );
-};
-
-export default IndexPage;
+}

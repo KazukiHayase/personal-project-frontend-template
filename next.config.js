@@ -9,4 +9,7 @@ module.exports = {
     },
   },
   transpilePackages: ['@mui/material'],
+  experimental: {
+    appDir: true,
+  },
 }
